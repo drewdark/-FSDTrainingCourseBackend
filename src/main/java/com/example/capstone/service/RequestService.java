@@ -22,6 +22,10 @@ public class RequestService {
     }
 
     public Request postRequest(Request request) {
+        FactorCalculator fc = new FactorCalculator();
+        double quoteValue = fc.calculateInsuranceQuote(request);
+        String quote = Double.toString(Math.round(quoteValue*100.0)/100.0);
+        request.setQuote(quote);
         return repository.save(request);
     }
 

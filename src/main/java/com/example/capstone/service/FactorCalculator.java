@@ -95,7 +95,7 @@ public class FactorCalculator {
         return outsideStateUseFactor;
     }
 
-    public double calculateInsurcanceQuote(Request request){
+    public double calculateInsuranceQuote(Request request){
         return 100 * (
                 calculateVehicleTypeFactor(request.getVehicleType()) *
                         calculateEngineSizeFactor(request.getEngineSize()) *
