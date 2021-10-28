@@ -29,20 +29,20 @@ public class RequestController {
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @DeleteMapping("/requests")
-    void deleteRecord(@RequestParam Long id) {
+    @DeleteMapping("/requests/{id}")
+    void deleteRecord(@PathVariable Long id) {
         service.delete(id);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/requests/{id}")
-    Optional<Request> getSingleRequest(@RequestParam Long id) {
+    Optional<Request> getSingleRequest(@PathVariable Long id) {
         return service.getSingleRequest(id);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @PutMapping("/requests")
-    void updateAPhoneNumber(@RequestParam Long id, @RequestParam String phone) {
+    @PutMapping("/requests/{id}")
+    void updateAPhoneNumber(@PathVariable Long id, @RequestParam String phone) {
         service.updatePhone(id, phone);
     }
 
