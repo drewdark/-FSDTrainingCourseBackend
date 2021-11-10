@@ -10,7 +10,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
 public class RequestController {
-
+;
     private final RequestService service;
 
     public RequestController(RequestService service) {
